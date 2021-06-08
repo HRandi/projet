@@ -33,7 +33,7 @@ Le contenu de ces dossiers doit être généré automatiquement depuis celui du 
 - [x] création de la structure du dossier du projet
 - [x] installation des librairies à utiliser
 - [x] création du fichier **gulp** pour  la génération automatique des dossiers depuis **src**
-- [ ] création du serveur
+- [ ] création du serveur ![50%](https://progress-bar.dev/50)
 - [ ] création du client
 - [ ] communication full-duplex entre le serveur et les clients
 
