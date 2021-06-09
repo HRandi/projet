@@ -23,7 +23,7 @@ Le projet dispose 3 répertoires :
 
 Le contenu de ces dossiers doit être généré automatiquement depuis celui du dossier **src** via une commande **gulp**.
 - pour la partie serveur web on utilisera le module **express** avec son middleware **express.static** pour servir le contenu du dossier **www**
-- pour la partie cliente, on souhaite juste avoir la trame de base. Donc une page d'accueil (index.html) contenant : 
+- pour la partie cliente, on souhaite juste avoir la trame de base. Donc une page d'accueil (index.html) contenant : <br>
       - une image, dont le fichier doit être dans le sous dossier **www/images** ; 
       - un fichier css simple placé dans le sous dossier **www/style** ;
       - un fichier script, placé dans le sous dossier **www/lib**, affichant simplement le titre h1 "Hello world !" dans la page en utilisant la librairie **jQuery** dont le fichier doit également se trouver dans le sous dossier  **www/lib**.
