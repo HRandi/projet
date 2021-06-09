@@ -24,9 +24,11 @@ Le projet dispose 3 répertoires :
 Le contenu de ces dossiers doit être généré automatiquement depuis celui du dossier **src** via une commande **gulp**.
 - pour la partie serveur web on utilisera le module **express** avec son middleware **express.static** pour servir le contenu du dossier **www**
 - pour la partie cliente, on souhaite juste avoir la trame de base. Donc une page d'accueil (index.html) contenant : <br>
-      - une image, dont le fichier doit être dans le sous dossier **www/images** <br> 
-      - un fichier css simple placé dans le sous dossier **www/style** <br>
-      - un fichier script, placé dans le sous dossier **www/lib**, affichant simplement le titre h1 "Hello world !" dans la page en utilisant la librairie **jQuery** dont le fichier doit également se trouver dans le sous dossier  **www/lib**.
+
+      - une image, dont le fichier doit être dans le sous dossier **www/images**
+      - un fichier css simple placé dans le sous dossier **www/style**
+      - un fichier script, placé dans le sous dossier **www/lib**, affichant le contenu de la page en utilisant la librairie **jQuery** dont le fichier doit également se trouver dans le sous dossier  **www/lib**.
+
 - Ce dossier projet type comporte également un fichier **.gitignore** correctement configuré pour éviter que les éléments auto-générable (build, buildx, node_modules,...) ne soient synchronisés sur les dépôts git. 
 - Dans les codes sources **client/serveur**, on va mettre en place les bases pour une communication _**full-duplex**_ entre le serveur et les clients via le module **socket.io**. 
 - Idéalement, pour plus de commodité, on va proposer une modalité de requêtage client=>serveur permettant d'attacher un **callback** réponse à un message (requête) envoyé au serveur afin d'y placer le code de traitement de la réponse.  
@@ -36,7 +38,12 @@ Le contenu de ces dossiers doit être généré automatiquement depuis celui du 
 - [x] création de la structure du dossier du projet
 - [x] installation des librairies à utiliser
 - [x] création du fichier **gulp** pour  la génération automatique des dossiers depuis **src**
-- [ ] création du serveur ![50%](https://progress-bar.dev/50)
-- [ ] création du client
+- [x] création du serveur
+- [x] maquetage de la page cliente
+- [ ] création de la page cliente ![50%](https://progress-bar.dev/50)
+- [ ] création de la fonctionnalité ajout
+- [ ] création de la fonctionnalité modification
+- [ ] création de la fonctionnalité suppression
+- [ ] création de la fonctionnalité impression
 - [ ] communication full-duplex entre le serveur et les clients
 
