@@ -23,9 +23,9 @@ Le projet dispose 3 répertoires :
 
 Le contenu de ces dossiers doit être généré automatiquement depuis celui du dossier **src** via une commande **gulp**.
 - pour la partie serveur web on utilisera le module **express** avec son middleware **express.static** pour servir le contenu du dossier **www**
-- pour la partie cliente, on souhaite juste avoir la trame de base. Donc une page d'accueil (index.html) contenant : 
-      - une image, dont le fichier doit être dans le sous dossier **www/images** ; 
-      - un fichier css simple placé dans le sous dossier **www/style** ;
+- pour la partie cliente, on souhaite juste avoir la trame de base. Donc une page d'accueil (index.html) contenant : <br>
+      - une image, dont le fichier doit être dans le sous dossier **www/images** <br> 
+      - un fichier css simple placé dans le sous dossier **www/style** <br>
       - un fichier script, placé dans le sous dossier **www/lib**, affichant simplement le titre h1 "Hello world !" dans la page en utilisant la librairie **jQuery** dont le fichier doit également se trouver dans le sous dossier  **www/lib**.
 - Ce dossier projet type comporte également un fichier **.gitignore** correctement configuré pour éviter que les éléments auto-générable (build, buildx, node_modules,...) ne soient synchronisés sur les dépôts git. 
 - Dans les codes sources **client/serveur**, on va mettre en place les bases pour une communication _**full-duplex**_ entre le serveur et les clients via le module **socket.io**. 
