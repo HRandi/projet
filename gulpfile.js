@@ -11,15 +11,18 @@ help(gulp, {
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const ts = require('gulp-typescript');
-const exec = require('child_process').exec
+const spawn = require('child_process').spawn
 /* #endregion */
 
 /* #region  Configuration de la toolschain */
 const TS_CONFIG = {
-    target: "ES5",
-    noImplicitAny: true
+    target: "ES6",
+    noImplicitAny: true,
+    removeComments: true,
+    module: 'commonjs',
+    moduleResolution: "node"
 };
-const file_to_run = 'build/server.js';
+const file_to_run = 'server.js';
 /* #endregion */
 
 /* #region   Définition des tâches */
@@ -32,25 +35,18 @@ function buildx() { // produit une version uglifier du code final
     );
 }
 
-function compil(){
-    return (src('src/**/*.ts')
-        .pipe(ts(TS_CONFIG))
-        .pipe(dest('build/www'))
-    );
-}
-
-function copy_www(){
+function copy_www(){ // copier les codes de src/www dans build/www sans le code .ts
     return (src(['src/www/**/*', '!src/**/*.ts'])
         .pipe(dest('build/www'))
     );
 }
 
-function clean(finish) {
+function clean(finish) { //Netoyer le code dans le dossier build et buildx
     console.log("... traitement du clean ...");
-    del(['build/*', 'buildx/*'], finish); //on doit appeler cette fonction à la fin de la tâche
+    del(['build/*', 'buildx/*'], finish); 
 }
 
-function build(finish) {
+function build() { // Transpliter les codes sources .ts
     console.log("... traitement du build ...");
     return (src('src/**/*.ts')
         .pipe(ts(TS_CONFIG))
@@ -58,17 +54,19 @@ function build(finish) {
     );
 }
 
-let full = series(clean, build, buildx);
+let full = series(clean, build, buildx, copy_www);
 /* #endregion */
 
 /* #region  Publication des tâches */
 
 gulp.task('run', "Lancement du serveur", function(finish){
-    exec('node '+file_to_run, function (err, stdout, stderr){
-        console.log(stdout);
-        console.log(stderr);
-        finish();
-    });
+    //utilisation d'un mode de lancement de commande avec affichage asynchrone
+    let cmd = spawn("node", [file_to_run], {cwd : 'build'});
+
+    cmd.stdout.on("data", val => console.log(val.toString()));
+    cmd.stderr.on("data", val => console.log(val.toString()));
+
+    cmd.on('close', finish);
 });
 
 exports.copy_www = copy_www;

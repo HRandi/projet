@@ -25,7 +25,6 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.12",
-    "@types/node": "^15.12.2",
     "delete": "^1.1.0",
     "gulp": "^4.0.2",
     "gulp-help-four": "^0.2.3",
