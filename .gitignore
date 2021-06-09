@@ -1,3 +1,4 @@
-node_modules
-buildx
-build
+/node_modules
+/buildx
+/build
+package-lock.json

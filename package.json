@@ -1,21 +1,38 @@
 {
   "name": "projet",
   "version": "1.0.0",
-  "description": "initiation au langage typescript CRUD",
-  "main": "index.js",
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "socket.io": "^4.1.2"
-  },
-  "devDependencies": {
-    "delete": "^1.1.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "gulp-uglify": "^3.0.2"
-  },
+  "description": "Initiation au langage typescript",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HRandi/projet.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
   "author": "Randi",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HRandi/projet/issues"
+  },
+  "homepage": "https://github.com/HRandi/projet#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/node": "^15.12.2",
+    "delete": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-help-four": "^0.2.3",
+    "gulp-rename": "^2.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
 }

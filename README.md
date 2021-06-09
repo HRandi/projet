@@ -10,7 +10,7 @@ Ce projet consiste à l'utisation du langage **typescript**. Le but c'est de se 
 
 <h4 style="color:#0000ff">Infrastructure du projet</h4>
 
-Cette infrastructure prend la forme d'une arborescence de fichier permettant l'organisation et la configuration d'un projet web **TypeScript** avec l'utilisation de **gulp** comme outils de gestion de la **toolschain**.
+L'infrastructure de ce projet prend la forme d'une arborescence de fichier permettant l'organisation et la configuration d'un projet web **TypeScript** avec l'utilisation de **gulp** comme outils de gestion de la **toolschain**.
 
 <h4 style="color:#0000ff">Structure du dossier du projet</h4>
 
