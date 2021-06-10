@@ -43,7 +43,7 @@ Le contenu de ces dossiers doit être généré automatiquement depuis celui du 
 - [x] création du serveur
 - [x] maquetage de la page cliente
 - [ ] création de la page cliente ![50%](https://progress-bar.dev/50)
-- [ ] création du code client ![50%](https://progress-bar.dev/50)
+- [ ] création du code client afin de se communiquer avec le serveur![50%](https://progress-bar.dev/50)
 - [ ] communication full-duplex entre le serveur et les clients
 - [ ] création de la fonctionnalité ajout
 - [ ] création de la fonctionnalité modification
