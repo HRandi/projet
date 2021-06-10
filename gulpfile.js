@@ -47,7 +47,6 @@ function clean(finish) { //Netoyer le code dans le dossier build et buildx
 }
 
 function build() { // Transpliter les codes sources .ts
-    console.log("... traitement du build ...");
     return (src('src/**/*.ts')
         .pipe(ts(TS_CONFIG))
         .pipe(dest('build/'))
@@ -55,7 +54,6 @@ function build() { // Transpliter les codes sources .ts
 }
 
 function defaut() { // Transpliter les codes sources .ts
-    console.log("... traitement du build ...");
     return (src('src/**/*.ts')
         .pipe(ts(TS_CONFIG))
         .pipe(dest('build/'))
@@ -77,12 +75,13 @@ gulp.task('run', "Lancement du serveur", function(finish){
     cmd.on('close', finish);
 });
 //Information sur les tâches dispo
-gulp.task('buildx', 'Minifier les codes js dans le dossier buildx', buildx);
-gulp.task('build', 'Compiler et copier le dossier www dans build', build);
+gulp.task('buildx', 'Minifie les codes js dans le dossier buildx en min.js', buildx);
+gulp.task('build', 'Compile et copie le dossier www dans build', build);
 gulp.task('clean', 'Efface le contenu du dossier build et buildx', clean);
 gulp.task('copy_www', 'Copie les ressources non ts situé dans src/www', copy_www);
-gulp.task('default', 'Nettoyer et compiler les ressources ts situé dans src', defaut);
+gulp.task('default', 'Nettoye le dossier build, buildx et compile tous les fichiers ts', defaut);
+gulp.task('full', 'Nettoye, compile et copie toutes les ressources situé dans src', full);
 
-exports.full = full;
+//exports.full = full;
 
 /* #endregion */
