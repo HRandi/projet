@@ -23,13 +23,13 @@ Le projet dispose 3 répertoires :
 
 Le contenu de ces dossiers doit être généré automatiquement depuis celui du dossier **src** via une commande **gulp**.
 - pour la partie serveur web on utilisera le module **express** avec son middleware **express.static** pour servir le contenu du dossier **www**
-- pour la partie cliente, on souhaite juste avoir la trame de base. Donc une page d'accueil (index.html) contenant : <br>
+- pour la partie cliente, on va créer un page d'acceuil, en utilisant **bootstrap** avec la structuration de dossier comme suit : <br>
 
-      - une image, dont le fichier doit être dans le sous dossier **www/images**
-      - un fichier css simple placé dans le sous dossier **www/style**
-      - un fichier script, placé dans le sous dossier **www/lib**, affichant le contenu de la page en utilisant la librairie **jQuery** dont le fichier doit également se trouver dans le sous dossier  **www/lib**.
+      - un sous dossier **www/images** pour contenir les images à utiliser
+      - un sous dossier **www/style** pour les feuilles de styles **css**
+      - un sous dossier **www/lib** pour mettre les librairies **jQuery**, **bootstrap.min.js** etc... afin d'afficher correctement le contenu de la page
 
-- Ce dossier projet type comporte également un fichier **.gitignore** correctement configuré pour éviter que les éléments auto-générable (build, buildx, node_modules,...) ne soient synchronisés sur les dépôts git. 
+- Le dossier projet comporte également un fichier **.gitignore** correctement configuré pour éviter que les éléments auto-générable (build, buildx, node_modules,...) ne soient synchronisés sur les dépôts git. 
 - Dans les codes sources **client/serveur**, on va mettre en place les bases pour une communication _**full-duplex**_ entre le serveur et les clients via le module **socket.io**. 
 - Idéalement, pour plus de commodité, on va proposer une modalité de requêtage client=>serveur permettant d'attacher un **callback** réponse à un message (requête) envoyé au serveur afin d'y placer le code de traitement de la réponse.  
 
@@ -42,9 +42,10 @@ Le contenu de ces dossiers doit être généré automatiquement depuis celui du 
 - [x] création du serveur
 - [x] maquetage de la page cliente
 - [ ] création de la page cliente ![50%](https://progress-bar.dev/50)
+- [ ] communication full-duplex entre le serveur et les clients
 - [ ] création de la fonctionnalité ajout
 - [ ] création de la fonctionnalité modification
 - [ ] création de la fonctionnalité suppression
 - [ ] création de la fonctionnalité impression
-- [ ] communication full-duplex entre le serveur et les clients
+
 
