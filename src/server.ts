@@ -12,12 +12,12 @@ let io_server = new Server_io(server);
 
 /* #endregion */
 
-io_server.on("connection", (socket_client : Socket) => {
+io_server.on("connection", (socket_client: Socket) => {
     console.log("un client se connecte...");
 
     //TODO : réalisation du dialogue client <--> serveur
 
-    socket_client.on("disconnect", ()=>{
+    socket_client.on("disconnect", () => {
         console.log("... le client se déconnecte !")
     });
 });
