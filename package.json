@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/HRandi/projet#readme",
   "dependencies": {
+    "@types/mysql": "^2.15.18",
+    "@types/socket.io-client": "^3.0.0",
     "express": "^4.17.1",
     "socket.io": "^4.1.2"
   },

@@ -1,4 +1,5 @@
 /node_modules
 /buildx
 /build
+/maquette
 package-lock.json

@@ -1,6 +1,6 @@
 ### Initiation à l'utilisation du langage typescript avec nodejs express
 
-Ce projet consiste à l'utisation du langage **typescript**. Le but c'est de se familiariser ladite langage en communicant un **client** et un **serveur**.
+Ce projet consiste à l'utisation du langage **typescript**. Le but c'est de se familiariser ladite langage en communicant un **client** et un **serveur**, et en ajoutant des opérations telles que ajout, modification, suppression et impression des données en utilisant **MySql** comme base de données.
 
 <h4 style="color:#0000ff">Outils utilisés</h4>
 
@@ -31,7 +31,8 @@ Le contenu de ces dossiers doit être généré automatiquement depuis celui du 
 
 - Le dossier projet comporte également un fichier **.gitignore** correctement configuré pour éviter que les éléments auto-générable (build, buildx, node_modules,...) ne soient synchronisés sur les dépôts git. 
 - Dans les codes sources **client/serveur**, on va mettre en place les bases pour une communication _**full-duplex**_ entre le serveur et les clients via le module **socket.io**. 
-- Idéalement, pour plus de commodité, on va proposer une modalité de requêtage client=>serveur permettant d'attacher un **callback** réponse à un message (requête) envoyé au serveur afin d'y placer le code de traitement de la réponse.  
+- On va proposer aussi une modalité de requêtage client=>serveur permettant d'attacher un **callback** réponse à un message (requête) envoyé au serveur afin d'y placer le code de traitement de la réponse.
+- On va utiliser **draw.io** pour le maquetage de notre IHM client afin de se référer facilement à ce que nous voulons faire.  
 
 <h4 style="color:#0000ff">Progression des tâches</h4>
 
